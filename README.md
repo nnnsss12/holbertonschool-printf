@@ -10,7 +10,7 @@ A custom implementation of the C `printf` function for handling characters, stri
 
 ## Requirements
 - Compiled with: `gcc -Wall -Werror -Wextra -pedantic -std=gnu89`
-- Style: Betty style.
+- Style: Betty style
 
 ## Authors
 - Noura
