@@ -13,5 +13,5 @@ A custom implementation of the C `printf` function for handling characters, stri
 - Style: Betty style.
 
 ## Authors
-- Norah
+- Noura
 - Saad
