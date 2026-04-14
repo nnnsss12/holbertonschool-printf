@@ -31,3 +31,31 @@ int print_string(char *str)
 
     return (i);
 }
+
+/**
+ * print_int - prints an integer
+ * @n: number
+ * Return: number of digits
+ */
+int print_int(int n)
+{
+	int count = 0;
+
+	if (n == 0)
+		return (_putchar('0'));
+
+	if (n < 0)
+	{
+		_putchar('-');
+		n = -n;
+		count++;
+	}
+
+	if (n / 10)
+		count += print_int(n / 10);
+
+	_putchar((n % 10) + '0');
+	count++;
+
+	return (count);
+}
