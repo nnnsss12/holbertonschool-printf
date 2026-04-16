@@ -42,6 +42,21 @@ int print_uint(unsigned int n)
 	return (count);
 }
 /**
+ * print_binary - prints unsigned int in binary
+ * @n: number
+ * Return: number of digits printed
+ */
+int print_binary(unsigned int n)
+{
+	int count = 0;
+
+	if (n / 2)
+		count += print_binary(n / 2);
+	_putchar((n % 2) + '0');
+	count++;
+	return (count);
+}
+/**
  * print_int - prints an integer
  * @n: number
  * Return: number of digits

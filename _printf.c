@@ -35,6 +35,8 @@ int _printf(const char *format, ...)
 				count += print_string(va_arg(args, char *));
 			else if (format[i] == 'd' || format[i] == 'i')
 				count += print_int(va_arg(args, int));
+			else if (format[i] == 'b')
+   				 count += print_binary(va_arg(args, unsigned int));
 			else if (format[i] == '%')
 			{
 				_putchar('%');
