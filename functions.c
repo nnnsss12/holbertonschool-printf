@@ -57,6 +57,55 @@ int print_binary(unsigned int n)
 	return (count);
 }
 /**
+ * print_octal - prints unsigned int in octal
+ * @n: number
+ * Return: number of digits printed
+ */
+int print_octal(unsigned int n)
+{
+	int count = 0;
+
+	if (n / 8)
+		count += print_octal(n / 8);
+	_putchar((n % 8) + '0');
+	count++;
+	return (count);
+}
+
+/**
+ * print_hex - prints unsigned int in hexadecimal lowercase
+ * @n: number
+ * Return: number of digits printed
+ */
+int print_hex(unsigned int n)
+{
+	int count = 0;
+	char digits[] = "0123456789abcdef";
+
+	if (n / 16)
+		count += print_hex(n / 16);
+	_putchar(digits[n % 16]);
+	count++;
+	return (count);
+}
+
+/**
+ * print_HEX - prints unsigned int in hexadecimal uppercase
+ * @n: number
+ * Return: number of digits printed
+ */
+int print_HEX(unsigned int n)
+{
+	int count = 0;
+	char digits[] = "0123456789ABCDEF";
+
+	if (n / 16)
+		count += print_HEX(n / 16);
+	_putchar(digits[n % 16]);
+	count++;
+	return (count);
+}
+/**
  * print_int - prints an integer
  * @n: number
  * Return: number of digits
