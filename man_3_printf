@@ -4,7 +4,7 @@
 _printf - formatted output
 
 .SH SYNOPSIS
-.B #include "main.h"
+.B #include  <main.h>
 .PP
 .BI "int _printf(const char *format, ...);"
 
